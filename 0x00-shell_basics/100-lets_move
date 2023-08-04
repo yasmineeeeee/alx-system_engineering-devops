@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Loop through files in the current directory
+for file in *; do
+    # Check if the file is a regular file and starts with an uppercase letter
+    if [[ -f "$file" && "$file" =~ ^[A-Z] ]]; then
+        # Move the file to the /tmp/u directory
+        mv "$file" /tmp/u/
+        echo "Moved $file to /tmp/u/"
+    fi
+done
+
